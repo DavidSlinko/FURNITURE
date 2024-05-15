@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block main %}
+
+<main class="main">
+
+
+        <div class="container">
+            <section class="products">
+                <h2 class="products__title">{{ category.title }}</h2>
+                <div class="products__content">
+
+
+                    {% for product in products %}
+                            <!-- карточка товара  -->
+                    {% include 'components/_product_cart.html' %}
+
+                    {% endfor %}
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+{% endblock main %}

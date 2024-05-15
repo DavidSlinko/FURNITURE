@@ -1,0 +1,223 @@
+import 'fonts.css';
+
+.login_content{
+    display: flex;
+    gap:25px;
+    flex-wrap: wrap;
+  }
+
+  .login{
+      padding:50px;
+      border: 1px solid rgba(119, 135, 166, 0.3);
+      border-radius: 5px;
+  }
+  .login_form input{
+    width: 536px;
+    border-radius: 5px;
+    border: 1px solid #082040;
+    font-family: 'Regul';
+    font-style: normal;
+    font-weight: 275;
+    font-size: 20px;
+    line-height: 24px;
+    color: #7787A6;
+    padding: 18px 0 18px 20px
+  }
+
+  .login_form form{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  }
+
+  .user_room, .login_title{
+  margin-bottom: 40px;
+  font-family: 'Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 43px;
+  color: #0F2859;
+}
+
+.btn-login, .btn-to_login{
+    width: 233px;
+    padding: 25px 0;
+    background: #0F2859;
+    border-radius: 10px;
+    font-family: 'Regul';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    color: #CFDDF6;
+    text-align: center;
+    cursor: pointer;
+}
+
+.longin_info{
+  border: 1px solid rgba(119, 135, 166, 0.3);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.longin_info p, .register_info p{
+  width: 449px;
+  font-family: 'Regul';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #082040;
+  margin: 40px 0 70px 0;
+}
+
+.first_visit{
+  font-family: 'Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #082040;
+}
+.btn-to_register{
+  width: 324px;
+  background: #0F2859;
+  border-radius: 10px;
+  padding: 25px 0;
+  text-align: center;
+  font-family: 'Regul';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  color: #CFDDF6;
+}
+
+.register_info{
+  border: 1px solid rgba(119, 135, 166, 0.3);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  border-radius: 5px;
+
+}
+
+.btn-register{
+  width: 425px;
+  padding: 25px 0;
+  background: #0F2859;
+  border-radius: 10px;
+  font-family: 'Regul';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  color: #CFDDF6;
+  cursor: pointer;
+}
+
+
+.card_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.btn_card {
+  width: 300px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f2859;
+  border-radius: 10px;
+  gap: 32px;
+  cursor: pointer;
+}
+
+.btn_text {
+  font-family: "Regul";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  color: #cfddf6;
+}
+.link_fav {
+  position: relative;
+}
+.link_fav:hover path {
+  fill: #082040;
+}
+.image_good {
+  max-width: 360px;
+  height: 300px;
+}
+
+.content__images {
+  display: flex;
+  gap: 24px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+
+
+.price_product p,
+.color_product p {
+  font-family: "Regul";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #082040;
+}
+.price_product h3 {
+  font-family: "Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 150%;
+  color: #082040;
+}
+
+.price_product,
+.color_product {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box_color {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.color_squer {
+  width: 22px;
+  height: 22px;
+  /* border: 1px solid red; */
+  border-radius: 5px;
+}
+.first {
+  background: #ffffff;
+  border: 0.2px solid #d3d3d3;
+}
+.second {
+  background: #323232;
+}
+.third {
+  background: #b388e9;
+}
+.forth {
+  background: #4769b8;
+}
+
+
+
+

@@ -1,0 +1,13 @@
+{% load static %}
+{% load furniture_tags %}
+{% get_categories as categories %}
+{% for category in categories %}
+<li>
+    <a href="{{ category.get_absolute_url }}" class="header__list-links">
+        <span class="header__list-img">
+            <img src="{{ category.get_image_category }}" alt="icons">
+        </span>
+        {{ category.title }}
+    </a>
+</li>
+{% endfor %}

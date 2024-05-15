@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block main %}
+
+
+<main class="main">
+    <div class="container">
+        <section class="products">
+            <div class="product__slider">
+
+                <div class="product__slider-item active">
+                    <img src="{{ product.get_image_product }}" alt="banner" class="product__slider-img">
+                </div>
+
+                {% include 'components/_detail_product.html' %}
+            </div>
+
+
+        </section>
+        <h2 class="products__title">Похожие товары</h2>
+        {% include 'components/_similar.html' %}
+    </div>
+</main>
+{% endblock main %}

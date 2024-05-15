@@ -1,0 +1,41 @@
+{% load static %}
+{% load furniture_tags %}
+<div class="basket__item">
+    <a href="#!" class="basket__item-img">
+        <img src="{{ item.product.get_image_product }}" alt="product">
+    </a>
+    <div class="basket__item-content">
+        <div class="basket__item-text">
+            <h2 class="basket__item-title">{{ item.product.title }}e</h2>
+            <p class="basket__item-price">
+
+                <span class="price"><span>{% get_normal_price item.product.price %}</span>сум</span>
+
+            </p>
+        </div>
+        <div class="basket__options">
+            {% if item.product.color_name %}
+            <p class="basket__options-color">
+                Цвет:
+                <span class="color__name">{{ item.product.color_name }}</span>
+                <span class="color__block"></span>
+            </p>
+            {% endif %}
+
+
+            <p class="basket__options-count">
+                Количество: <span>{{ item.quantity }}</span>
+            </p>
+
+
+            <p class="basket__options-size">
+                Размер: Высота × Ширина × Глубина <span>
+                {{ item.product.height }} СМ × {{ item.product.width }} СМ × {{ item.product.depth }} СМ
+            </span>
+            </p>
+        </div>
+    </div>
+    <a href="{% url 'to_cart' item.product.slug 'delete' %}" class="basket__delete">
+        <i class="fas fa-times"></i>
+    </a>
+</div>

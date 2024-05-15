@@ -1,0 +1,52 @@
+{% load static %}
+
+{% load furniture_tags %}
+{% get_colors product.model_product  as colors %}
+
+<div class="product__slider-parameters">
+
+
+    <h1 class="product__title">{{ product.title }}</h1>
+    <span class="product__categories">{{ product.category }}</span>
+    <div class="product__links">
+        <h2 class="product__links-price"><span>{% get_normal_price product.price %}</span> сум</h2>
+        <a href="#!" class="product__links-buy">Купить</a>
+        <a href="" class="products__item-heart product__links-add">
+            <span></span></a>
+    </div>
+
+
+    <!-- Вкусы   -->
+    <ul class="paremeters__list">
+
+
+        <div class="paremetes__list-item">
+            <h3 class="paremeters__list-title">Цвет</h3>
+            <div class="box_color">
+                {% for color in colors %}
+                <a href="{% url 'product_color' product.model_product color %}" class="color_squer"
+                   style="background: {{ color }}"></a>
+                {% endfor %}
+            </div>
+        </div>
+
+
+        <li class="paremetes__list-item">
+            <h3 class="paremeters__list-title">Количество</h3>
+            <a href="#!" class="paremeters__list-btn">
+                <div class="paremeters__count"><span>1</span></div>
+                <img src="{% static 'furniture/assets/icons/arrow-black.svg' %}" alt="arrow-down">
+            </a>
+            <div class="list__drop"></div>
+
+        </li>
+        <li class="paremetes__list-item">
+            <h3 class="paremeters__list-title">Размер: Высота × Ширина × Глубина</h3>
+            <div class="paremeters__size">{{ product.height }} СМ × {{ product.width }} СМ × {{ product.depth }} СМ
+            </div>
+        </li>
+    </ul>
+
+    <!-- Описание  -->
+    <p class="product__descr"><span class="product__descr-title">Описание</span>{{ product.description }}</p>
+</div>

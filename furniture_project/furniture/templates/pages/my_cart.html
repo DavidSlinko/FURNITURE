@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load furniture_tags %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block main %}
+
+<main class="main">
+    <div class="container">
+        <section class="basket">
+            <div class="basket__text">
+                {% if products %}
+                <h1 class="basket__title">Ваша корзина</h1>
+                <span class="basket__count"><span>{{ order.get_cart_total_quantity }}</span> предмета</span>
+                {% else %}
+                <div>
+                    <h3>Ваша корзина пуста 😔</h3>
+                </div>
+                {% endif %}
+            </div>
+            <div class="basket__items">
+
+                {% for item in products %}
+                {% include 'components/_basket__item.html' %}
+                {% endfor %}
+
+
+            </div>
+            {% if products %}
+            <form class="products__form">
+                <span>Итоговая стоимость:<span class="products__form-price">{% get_normal_price order.get_cart_total_price %} сум</span> </span>
+
+                <a href="{% url 'checkout' %}" class="btn products__form-btn">Оформить заказ</a>
+                {% endif %}
+            </form>
+        </section>
+        <!-- /.basket -->
+
+
+        <!-- /.products -->
+
+    </div>
+    <!-- /.container -->
+</main>
+
+{% endblock main %}

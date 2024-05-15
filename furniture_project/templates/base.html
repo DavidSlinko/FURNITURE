@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+    <!-- Css - Стили -->
+    {% include 'components_base/_style.html' %}
+
+</head>
+
+<body>
+
+{% for message in messages %}
+<div class="alert {{ message.tags }}" role="alert" id="message">
+    {{ message }}
+</div>
+{% endfor %}
+
+{% include 'components_base/_nav.html' %}
+
+
+{% include 'components_base/_header.html' %}
+
+
+<div class="wrapper">
+
+    {% block main %}
+
+    {% endblock main %}
+
+</div>
+<!-- /.wrapper -->
+{% include 'components_base/_footer.html' %}
+
+{% include 'components_base/_js.html' %}
+<!-- Js - скрипты -->
+</body>
+
+</html>

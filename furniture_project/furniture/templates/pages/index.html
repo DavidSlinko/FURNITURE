@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block main %}
+
+<main class="main">
+
+    {% block poster %}
+    {% include 'components_base/_poster.html' %}
+    {% endblock poster %}
+
+        <div class="container">
+            <section class="products">
+                <h2 class="products__title">Хиты продаж</h2>
+                <div class="products__content">
+
+                    {% for category in categories %}
+
+                    {% for product in category.products.all|slice:"::-1"|slice:"1" %}
+
+                            <!-- карточка товара  -->
+                    {% include 'components/_product_cart.html' %}
+
+                    {% endfor %}
+
+                    {% endfor %}
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+{% endblock main %}

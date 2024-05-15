@@ -1,0 +1,58 @@
+{% load static %}
+<header class="header">
+    <div class="container">
+        <div class="header__content">
+            <div class="header__bar">
+                <a href="#!" class="nav__bars-open">
+                    <span class="burger"></span>
+                    <span class="burger"></span>
+                    <span class="burger"></span>
+                </a>
+
+                <a href="{% url 'index' %}" class="logo">
+                    <img src="{% static 'furniture/assets/icons/LOGO.svg' %}" alt="logo">
+                </a>
+                <form class="header__search">
+                    <i class="fal fa-search"></i>
+                    <input type="text" class="header__search-txt" placeholder="Поиск">
+                </form>
+
+                <ul class="header__list">
+                    <li>
+                        <a href="./registration.html" class="header__list-item _truck">
+                            <i class="far fa-truck"></i>
+                            Доставка
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'favorite' %}" class="header__list-item" id="_heart">
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'my_cart' %}" class="header__list-item" id="_bag">
+
+                        </a>
+                    </li>
+                    <li>
+                        {% if request.user.is_authenticated %}
+                        <a href="{% url 'profile' request.user.pk %}" class="header__list-item" id="_profile"></a>
+                        {% endif %}
+
+                    </li>
+                </ul>
+            </div>
+            <ul class="header__list _categories">
+
+                <!--карточка категории  -->
+                {% include 'components/_cart_category.html' %}
+
+
+            </ul>
+
+
+        </div>
+
+    </div>
+
+</header>
